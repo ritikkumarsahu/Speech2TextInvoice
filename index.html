@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="wave.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row col-12" style="border-top: 2px solid grey; margin-top: 5px;">
+        <div class="col-5" style="border-right: 2px solid grey">
+            <div class="text-center">
+                <h1>Speech To Text Invoice</h1>
+                <a href="#" id="start_speak" class="btn btn-info" style="margin-top: 10vh; font-size: 22px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"> <path fill="#ffffff" id="svg_1" d="m16,11c0,2.209 -1.791,4 -4,4s-4,-1.791 -4,-4l0,-7c0,-2.209 1.791,-4 4,-4s4,1.791 4,4l0,7zm4,-2l0,2c0,4.418 -3.582,8 -8,8s-8,-3.582 -8,-8l0,-2l2,0l0,2c0,3.309 2.691,6 6,6s6,-2.691 6,-6l0,-2l2,0zm-7,13l0,-2l-2,0l0,2l-4,0l0,2l10,0l0,-2l-4,0z"/></svg>
+                    <span>Speak</span>
+                </a>
+                
+                <div style="padding-top: 20px">
+                    <div class="border">
+                        <h4>Question</h4>
+                        <h5 id="question">Say Bill Number</h5>
+                    </div>
+                    <div class="border">
+                        <h4>Answer</h4>
+                        <h5 id="answer">P965QDWC456</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-7">
+            <form class="row" id="myForm" method="post" action="#" enctype="multipart/form-data" style="padding: 20px 0;">
+                
+                <div>
+                <br>
+                <br>
+                <br>
+                        
+                    </div>
+                <div class="col-12">
+                <div>
+                        <label class="col-2" for="Certified-Program-Hash">Talgo Name :</label>
+                        <input class="col-8" type="text" id="formTalgoname" name="talgoName" autocomplete="off" placeholder="Talgo Name" style="margin-bottom: 30px;">
+                    
+                    </div>
+                    <h3> Invoice Header </h3>
+                 </div>
+                <div class="col-xl-10">
+                    
+                    <div>
+                        <label class="col-6" for="formCountrycode" style="">Country Code: </label>
+                        <input class="col-5" type="text" id="formCountryCode" name="formCountrycode" autocomplete="off" placeholder="Country Code" style=" margin-bottom: 10px;">					
+                    </div>	
+                    <div>
+                        <label class="col-6" for="formDocument">Document Type: </label>
+                        <input class="col-5" type="text" id="formDocumentType" name="formDocumentType" autocomplete="off" placeholder="Document Type" style=" margin-bottom: 10px;">					
+                    </div>	
+        
+                    <div>
+                        <label class="col-6" for="certificateNumber">Software Certificate  :</label>
+                        <input class="col-5" type="text" id="certificateNumber" name="Software Certificate" autocomplete="off" placeholder="Software Certificate" style=" margin-bottom: 10px;">
+                    </div>
+                    <div>
+                        <label class="col-6" for="supplier_nif_number">Supplier NIF Number :</label>
+                        <input class="col-5" type="text" id="supplier_nif_number" name="Supplier NIF Number " autocomplete="off" placeholder="Supplier NIF Number" style=" margin-bottom: 10px;">
+                    </div>
+                    <div>
+                        <label class="col-6" for="Supplier-Name">Supplier Name :</label>
+                        <input type="text" class="col-5" id="supplierName" name="Supplier-Name" autocomplete="off" placeholder="Supplier Name" style="margin-bottom: 10px;">
+                    </div>
+                    <div>
+                        <label class="col-6" for="Invoice-Number">Invoice Number :</label>
+                        <input class="col-5" type="text" id="InvoiceNumber" name="Invoice-Number" autocomplete="off" placeholder="Invoice Number" style=" margin-bottom: 10px;">
+                    </div>
+                    <div>
+                        <label class="col-6" for="Invoice-Date">Invoice Date :</label>
+                        <input class="col-5" type="text" id="Invoice-Date" autocomplete="off" placeholder="Invoice Date" style="margin-bottom: 10px;">
+                    </div>
+                    <div>
+                        <label class="col-6" for="Due-Date">Due Date :</label>
+                        <input class="col-5" type="text" id="Due-Date" autocomplete="off" placeholder="Due Date" style="margin-bottom: 10px;">
+                    
+                    </div>
+                    <div>
+                        <label class="col-6" for="Buyer-NIF-Number">Buyer NIF Number:</label>
+                        <input class="col-5" type="text" id="buyer" autocomplete="off" placeholder="Buyer NIF Number" style="margin-bottom: 10px;">
+                    
+                    </div>
+                    <div>
+                        <label class="col-6" for="Certified-Program-Hash">Software Certificate Hash:</label>
+                        <input class="col-5" type="text" id="certprogramhasg" name="Software Certificate Hash" autocomplete="off" placeholder="Software Certificate Hash" style="margin-bottom: 10px;">
+                    
+                    </div>
+                                                    
+                </div>
+                
+                <div class="col-12">
+                <h3>Total Amounts </h3>
+            </div>
+
+            <div class="col-xl-10">		
+                <label class="col-6" for="BaseAmount">Base Amount:</label>
+                <input class="col-5" type="text" id="BaseAmount" name="Base Amount" placeholder="Base Amount" style="margin-bottom: 10px;text-align:right;">
+                        
+                <label class="col-6" for="TaxAmount">Tax Amount:</label>
+                <input class="col-5" type="text" id="TaxAmount" name="Tax Amount" placeholder="Tax Amount" style="margin-bottom: 10px;text-align:right;">
+                
+                <label class="col-6" for="TotalAmount">Total Amount:</label>
+                <input class="col-5" type="text" id="TotalAmount" name="Total Amount" placeholder="Total Amount" style="margin-bottom: 10px; text-align:right;">
+
+            </div>
+            </form>
+        <div class="col-12" style="padding: 10px 0 0 10px ; border-top: 1px solid black;">
+                <div class="col-md-0">
+                    <div>
+                        <input type="submit" value="Submit">
+                    </div>
+                    <br>
+                    <p>Date/Time: <span id="datetime">11/30/2020, 12:24:12 PM</span></p>
+    
+                        <script>
+                        var dt = new Date();
+                        document.getElementById("datetime").innerHTML = dt.toLocaleString();
+                        </script>
+                </div>
+        </div>	
+
+        <div class="col-12" style="margin-bottom: 10px; border-bottom: 2px solid black;"></div>     
+        </div>
+        
+    </div>
+    <script src="stt.js"></script>
+</body>
+</html>
